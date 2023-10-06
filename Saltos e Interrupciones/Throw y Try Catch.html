@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THROW Y TRY CATCH</title>
+</head>
+
+<body style="font-size: 2em;">
+
+    <script type="text/javascript">
+
+
+
+        /**
+         **                                    THROW y TRY CATCH
+            * Función:e utiliza en JavaScript para lanzar una excepción. Cuando usas throw, estás generando 
+            * un error de manera deliberada en tu código. Las excepciones se utilizan para manejar situaciones
+            * excepcionales o errores que pueden ocurrir durante la ejecución del programa.
+            * 
+        */
+
+
+        /**
+         * * Throw y Try Catch
+         * Ejemplo 1. Craear una funcion que calcule el 5!. 
+        */
+
+        function calcularFactorial(x) {
+
+
+            try { //intente lo siguiente:
+                if (x < 0) throw new Error("Número negativo!!!") //Asi maneno el error en caso de introducir un número negativo.
+                //Al lanzar el error, pega un salto y ni siquiera se ejecuta lo de abajo.
+                //Pero debenos de capturar ese error que lanzo.
+            }
+            catch (e) { //sino muestre el eror
+                document.write(e); //e por convención.
+            }
+
+            let factorial;
+
+            for (factorial = 1; x > 1; x--) {
+
+                factorial = factorial * x;
+                //factorial*=numero;  //asi tambien se escribe
+
+            }
+
+            return factorial
+
+        }
+
+        let numero = parseInt(prompt("Ingresa un número, por favor: "));
+
+
+        document.write(calcularFactorial(numero));
+
+
+
+
+    </script>
+
+</body>
+
+</html>

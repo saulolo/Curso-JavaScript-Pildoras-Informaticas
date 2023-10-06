@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONTINUE</title>
+</head>
+
+<body style="font-size: 2em;">
+
+    <script type="text/javascript">
+
+
+        /**
+         **                                     CONTINUE
+            * Definición: Salta a la siguiente iteración de bucle, obviando todo lo que pudiera ver a 
+            * continuación dentro del bucle despues de la indicación continue.
+            * 
+        */
+
+
+        /**
+         * * Continue
+         * Ejemplo 1. Salarios de trabajadores.
+        */
+
+        let numTrabajador = 0;
+
+        let salarios = [];
+
+        for (let i = 0; i < 5; i++) {
+
+            numTrabajador++;
+            let nomina = prompt("Introduce el salario del tranajador " + numTrabajador);
+
+            if (nomina < 1000) continue; // Dice que si no cumple esta condicón, ignore la siguiente liena (no hace la deducción.)
+
+            salarios[i] = nomina - (nomina * 0.25); //deducción del 25%.
+        }
+
+        for (salario of salarios) {
+
+            if (!salarios) continue //No imprime aquellas posiciones en las que no se conocen el salario.
+
+            document.write(salario + "<br>")
+
+        }
+
+
+        /**
+         * * Continue
+         * Ejemplo 2. El mismo ejemplo anterior pero con while pero no deja continuar sino introduce un salario. 
+        */
+
+        while (numTrabajador < 5) {
+            let nomina = prompt("Introduce el salario del tranajador " + numTrabajador);
+
+            if (!salarios) continue
+            salarios[numTrabajador] = nomina - (nomina * 0.25);
+
+            numTrabajador++;
+        }
+
+
+    </script>
+
+</body>
+
+</html>

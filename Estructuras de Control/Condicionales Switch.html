@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONDICIONAL SWITCH</title>
+</head>
+
+<body style="font-size: 2em;">
+
+    <script type="text/javascript">
+
+        /**
+         **                                    SWITCH
+            * Switch Case: Se utiliza switch cuando necesites tomar decisiones múltiples basadas en el valor de 
+            * una expresión o variable, y cuando desees que tu código sea más legible y estructurado que una serie 
+            * de if-else if anidados.
+            * Sintáxis: switch (expresion) {
+            *               case valor1:
+            *                     Código a ejecutar si expresion === valor1
+            *                   break;
+            *               case valor2:
+            *                     Código a ejecutar si expresion === valor2
+            *                   break;
+            *                     Puedes agregar más casos según sea necesario
+            *               default:
+            *                    Código a ejecutar si ninguno de los casos coincide con la expresion
+            *               }
+            * Nota: El switch case a la hora de evaluar el valor almacenado en una variable, utiliza el triple 
+            * igual (===), este operador evalua valor y tipo y solo devuelve true si se cumple ambas condiciones,
+            * por eso las igualdades en el switch de JS hay que realizar un parseo, en cambio en las estructuras
+            * Else If, solo se evalua el doble igual (==), por eso no hay que realizar conversióWn.
+            * 
+        */
+
+
+        /**
+         * * Switch case
+         * Ejemplo 1. Elige una opción.
+        */
+
+        //A la hora de utilizar el switch, se debe de considerar que el texto se recibe es de tipo string
+        //asi que hago un parseo en los case o en prompt.
+        let opcion = Number.parseInt(prompt("Introduce la opción deseada [1,2,3]: "));
+        //Pueso utilizar la función global parseint, y no el método, quedado asi: parseInt(prompt("Introduce la opción deseada [1,2,3]: "));
+
+        switch (opcion) {
+            case 1:  //Puedo cambiar la opcion a: "1" en caso de no hacer el parseo en el prompt.
+                document.write("Elegiste la opción 1.");
+                break;
+            case 2:
+                document.write("Elegiste la opción 2.");
+                break;
+            case 3:
+                document.write("Elegiste la opción 3.");
+                break;
+            default:
+                document.write("Opción no válida.");
+                break;
+        }
+
+
+
+        document.write("<br>");
+        /**
+        * * Switch case
+        * Ejemplo 2. Validar una calificación.
+        */
+
+        let nota = parseInt(prompt("Introduce la nota del examen: "));
+
+        switch (true) {
+            case nota < 5:
+                document.write("Insuficiente.");
+                break;
+
+            case nota < 6:
+                document.write("Suficiente.");
+                break;
+
+            case nota < 7:
+                document.write("Bien.");
+                break;
+
+            case nota < 9:
+                document.write("Notable.");
+                break;
+
+            case nota < 10:
+                document.write("Sobresaliente.");
+                break;
+
+            default:
+                document.write("Nota incorrecta.");
+                break;  //Este break no es neceario, se puede omitir si se quiere.
+        }
+
+
+        document.write("<br>");
+        /**
+        * * Switch case
+        * Ejemplo 3. Validar una calificación (sin operadores lógicos en los case).
+        */
+
+        let notas = parseInt(prompt("He realizado mi examen. Mi resultado es el siguiente: "));
+
+        switch (notas) {
+            case 10:
+                calificacion = "Sobresaliente";
+                break;
+            case 9:
+            case 8:
+                calificacion = "Notable";
+                break;
+            case 7:
+            case 6:
+                calificacion = "Bien";
+                break;
+            case 5:
+                calificacion = "Suficiente";
+                break;
+            case 4:
+            case 3:
+            case 2:
+            case 1:
+            case 0:
+                calificacion = "Insuficiente";
+                break;
+            default:
+                // Cualquier otro caso
+                calificacion = "Nota errónea";
+                break;
+        }
+
+        document.write("He obtenido un " + calificacion);
+
+
+    </script>
+
+</body>
+
+</html>

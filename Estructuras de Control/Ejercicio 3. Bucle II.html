@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EJERCICIO BUCLES FOR</title>
+</head>
+
+<body style="font-size: 2em;">
+
+    <script type="text/javascript">
+
+        /**
+         * * Ejercicio.
+         * El programa pedirá introducir un nº desde una ventana de prompt y calculará el factorial de dicho nº.
+         * El factorial de un nº se representa matemáticamente con el símbolo! y es el resultado de multiplicar ese 
+         * nº por todos los que le preceden. Por ejemplo 5!=5x4x3x2x1, es decir, 5!=120.
+         * El programa debe utilizar un bucle for para hallar el resultado y mostrar este en el documento web.
+        */
+
+
+        /**
+         * * Solución 1.
+         * Método For con variable factorial.
+        */
+
+        let numero = parseInt(prompt("Ingresa un número, por favor: "));
+
+        let factorial = 1;
+
+        for (let i = 1; i <= numero; i++) {
+
+            factorial *= i;
+
+        }
+
+        document.write("El Factorial de " + numero + "! = " + factorial + "<br>");
+
+
+    </script>
+
+</body>
+
+</html>

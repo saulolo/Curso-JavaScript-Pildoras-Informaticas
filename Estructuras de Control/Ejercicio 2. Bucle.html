@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EJERCICIO BUCLES</title>
+</head>
+
+<body style="font-size: 2em;">
+
+    <script type="text/javascript">
+
+        /**
+         * * Ejercicio.
+         * El programa generará un nº aleatorio entre 1 y 100 que nosotros desconocemos. El programa pedirá 
+         * desde una ventana de prompt que introduzcamos un nº entre 1 y 100. Si el nº introducido por nosotros 
+         * en la ventana de prompt es menor que el nº aleatorio generado por el programa, deberá salir una 
+         * ventana de alert señalando que el nº es “más alto”.
+         * Si por el contrario, el nº introducido en la ventana de prompt es mayor que el generado por el 
+         * programa, deberá salir una ventana de alert señalando que el nº es “más bajo”.
+         * Este proceso se repetirá hasta que poco a poco con las pistas de “Más alto” y “Más bajo” acertemos 
+         * el nº aleatorio generado por el programa. En ese momento saldrá en la página web el mensaje: 
+         * “Correcto! Lo has adivinado en x intentos” donde x corresponde al nº de intentos consumidos en 
+         * averiguar el nº.
+        */
+
+
+        /**
+         * * Solución 1.
+         * Método Do-While.
+        */
+
+        let numAleatorio = Math.floor(Math.random() * 101) + 1;
+
+        let numeroIntroducido;
+
+        let contador = 0;
+
+        do {
+
+            numeroIntroducido = parseInt(prompt("Ingresa un número entre 1 y 100, por favor: "));
+
+            if (numeroIntroducido < numAleatorio) alert("El número a adivinar es más alto.");
+
+            else if (numeroIntroducido > numAleatorio) alert("El número a adivinar es más bajo.");
+
+            contador++;
+
+        } while (numeroIntroducido != numAleatorio);
+
+        document.write("Correcto! Lo has adivinado en " + contador + " intentos");
+
+
+
+        /**
+         * * Solución 2.
+         * Método While.
+        */
+
+        let numAleatorio2 = Math.floor(Math.random() * 101) + 1;
+
+        let numeroIntroducido2 = parseInt(prompt("Ingresa un número entre 1 y 100, por favor: "));
+
+        let contador2 = 0;
+
+        while (numeroIntroducido2 != numAleatorio2) {
+
+            contador2++;
+
+            if (numeroIntroducido2 < numAleatorio2) alert("El número a adivinar es más alto.");
+
+            else if (numeroIntroducido2 > numAleatorio2) alert("El número a adivinar es más bajo.");
+
+            numeroIntroducido2 = parseInt(prompt("Ingresa un número entre 1 y 100, por favor: "));
+
+        }
+
+        document.write("Correcto! Lo has adivinado en " + contador2 + " intentos");
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BREAK</title>
+</head>
+
+<body style="font-size: 2em;">
+
+    <script type="text/javascript">
+
+
+        /**
+         **                                     BREAK
+            * Definición: se utiliza dentro de estructuras de control, como bucles (for, while, do...while) y 
+            * sentencias switch, para salir prematuramente de la ejecución de dichas estructuras cuando se cumple 
+            * una condición específica.
+            * 
+        */
+
+
+        /**
+         * * Break
+         * Ejemplo 1. Validar correo y rompa la evaluación apenas encuentre el @.
+        */
+
+        let mail = prompt("Introduce el email, por favor");
+
+        let arroba = false; //La inicio en false.
+
+        for (let i = 0; i < mail.length; i++) { //Recorrer el mail letra a letra.
+            document.write("Evaluando carácter " + i + " del mail.<br>")
+
+            if (mail[i] == "@") {  //Condicional que evaula vuelta a vuelta si cada caracter es igual a @
+                arroba = true;
+                document.write("ARROBA ENCONTRADA!! <br>")
+                break;  //Lo pongo para que  no siga evaluando una vez encontrada la @ (para que no consuma recursos el pc)
+
+            }
+        }
+        if (arroba == true) { //si pongo solo if(arroba) es lo mismo, por default es verdadero.
+            document.write("Mail correcto.")
+        } else {
+            document.write("Mail incorrecto.")
+        }
+
+
+
+        /**
+         * * Break
+         * Ejemplo 2. Validar paises y rompa la evaluación apenas encuentre Colombia.
+         * Nota: Introducir paises hasta darle al boton cancelar.
+        */
+
+        let naciones = [];
+
+        let num = 0;
+
+        do {
+            num++;
+
+            naciones[num] = prompt("Introduce una nación. \nPulsa cancelar para salir"); // salto de linea: \n
+
+        } while (naciones[num] != null) //Pida indefinidamente paises hasta pulsar cancelar.
+
+
+        for (let i = 0; i < naciones.length; i++) {
+            if (naciones[i] == "Colombia" || naciones[i] == "colombia" || naciones[i] == "COLOMBIA") {
+                document.write("Colombia encontrada!!!");
+                break;   //Rompe el bucle cuando encuentre Colombia.
+            }
+        }
+
+
+
+        /**
+         * * Break Otra forma de hacerlo.
+         * Ejemplo 3. Validar paises y rompa la evaluación apenas encuentre Colombia.
+         * Nota: Introducir paises hasta darle al boton cancelar.
+        */
+
+        while (true) {  //Se mete en un bucle infinito y sale cuando ponga Colombia.
+
+            naciones[i] = prompt("Introduce una nación. \nPulsa cancelar para salir");
+
+            if (naciones[i] == "Colombia" || naciones[i] == "colombia" || naciones[i] == "COLOMBIA") {
+
+                document.write("Colombia encontrada!!!");
+
+                break;   //Rompe el bucle cuando encuentre Colombia.
+            }
+
+            i++;
+        }
+
+
+        /**
+         * * Break con Label (Etiquetas)
+         * Ejemplo 4. Recorrer ciudades de paises con array multidimencional.
+         */
+
+        //Array de 3 * 3
+        let ciudades = [["Bogota", "Medellin", "Cali"], ["Barcelona", "Madrid", "Málaga"], ["Roma", "Milá", "Venecia"]];
+
+        buclePrincipal: for (let i = 0; i < ciudades.length; i++) { //Asi se pone una etiqueta.
+
+            for (let j = 0; j < 3; j++) {
+
+                if (ciudades[i][j] == "Madrid") break buclePrincipal;
+                //Cuando se trabaja con bucles anidados y se quiere aplicar un break se debe utizar labels (etiquetas).
+
+                document.write(ciudades[i][j] + "<br>");
+
+
+            }
+
+            document.write("Estoy en el bucle principal <br>");
+
+
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>

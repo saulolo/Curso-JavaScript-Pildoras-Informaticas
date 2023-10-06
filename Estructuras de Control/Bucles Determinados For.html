@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FOR</title>
+</head>
+
+<body style="font-size: 2em;">
+
+    <script type="text/javascript">
+
+        /**
+         **                                    BUCLE FOR
+            * For: es una estructura de control que se utiliza para repetir un bloque de código un número específico 
+            * de veces o para recorrer elementos en una colección. Se compone de una inicialización, una condición y una 
+            * expresión de incremento que controlan la ejecución del bucle. 
+            * Sintáxis: for(inicialización, condición, incremento) {
+            *                 código a evaluar
+            *           }
+            * Nota: Este bucle lo usamos cuando concemos de antemano el número de veces que se va a repetir una sentencia.
+            * 
+        */
+
+
+        /**
+         * * For
+         * Ejemplo 1. Ejercicio básico del ciclo for.
+        */
+
+
+        for (let contador = 0; contador < 10; contador++) { //Cuando contador sea igual a 10, saldra del bucle.
+            document.write("Vuelta de bucle número: " + contador + "<br>");
+        }
+
+
+        /**
+         * * For
+         * Ejemplo 2. Inicizalizando con dos variables.
+        */
+
+        for (let x = 1, y = 2; x < 10; x++, y++) {
+            document.write(`${x} es menor es ${y} <br>`);
+        }
+
+
+        /**
+         * * For
+         * Ejemplo 3. Cambiando las condicionales.
+        */
+
+        let inicio = prompt("Introduce el inicio del bucle: ");
+        let final = prompt("Introduce el final del bucle: ");
+        let continuar = true;
+
+        for (let x = inicio; continuar; x++) {
+            document.write(`Vuelta ${x} <br>`);
+
+            if (x == 15) continuar = false;
+        }
+
+
+    </script>
+
+</body>
+
+</html>

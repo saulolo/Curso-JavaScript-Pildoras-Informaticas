@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONDICIONALES</title>
+</head>
+
+<body style="font-size: 2em;">
+
+    <script type="text/javascript">
+
+        /**
+         **                                    CONDICIONALES
+         * If - Else:  permite que un programa tome diferentes caminos basados en condiciones específicas, lo que es 
+         * esencial para controlar el flujo de un programa y tomar decisiones dinámicas.
+         * Sintáxis: if(condición a evaluar) {
+         *             código a ejecutar   
+         *           }
+         *           else { 
+         *             código a ejecutar
+         *           }
+         * If Anidados: Condicionales dentro de otros.
+         * Else if: Se utiliza cuando se necesite encadenar varios condicionales.
+         * (?):	Operador ternario: Equivalente a If/else, forma abreviada.
+        */
+
+
+        /**
+         * * If - Else
+         * Ejemplo 1. Validar la edad de una persona.
+        */
+
+        //prompt: Ventana modal que permite que el usuario introduzca los datos.
+        let edad = prompt("Introduce tu edad, por favor.");
+
+        if (edad >= 18) {
+
+            document.write("Eres mayor de edad. <br>");
+
+            let importe = prompt("Introduce tus ahorros.");
+
+            if (importe >= 150) document.write("Puedes obtener el carnet. <br>"); //Cuando solo lleva una linea.
+
+            else document.write("El importe no es suficiente. No tienes carnet.");
+
+        } else {
+
+            document.write("Con " + edad + " años, un no tienes edad para conducir. <br>");
+
+            let edadCandidato = 18 - edad;
+
+            document.write(`Vuelve dentro de ${edadCandidato} años.`); //Otra manera de concatear aparte del +.
+
+        }
+
+        document.write("<br>");
+
+        document.write("Acabamos de evaluar la edad del candidato.");
+
+
+
+        /**
+         * * Else If
+         * Ejemplo 2. Validar una calificación.
+        */
+
+        let nota = prompt("Ingresa la nota obtenida: ");
+
+        if (nota <= 5) document.write("Insuficiente. <br>");
+
+        else if (nota >= 5 && nota < 6) document.write("Suficente. <br>");
+
+        else if (nota >= 6 && nota < 7) document.write("Bien. <br>");
+
+        else if (nota >= 7 && nota < 9) document.write("Notable. <br>");
+
+        else document.write("Sobresaliente.");
+
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EJERCICIO BREAK</title>
+</head>
+
+<body style="font-size: 2em;">
+
+    <script type="text/javascript">
+
+        /**
+         * * Ejercicio.
+         * Crea un programa que pida mediante ventanas de prompt 2 números. El programa debe mostrar los 3 
+         * primeros números primos comprendidos en el rango de los números introducidos.
+         * Por ejemplo: Si introducimos como primer número un 5 y como segundo número un 20, el programa debe 
+         * mostrar los 3 primeros números primos comprendidos entre 5 y 20, es decir, “5   7   11”.
+         * Debes incluir en tu programa la instrucción “break”.
+         * No te olvides de enviar tu ejercicio a tutorizados@pildorasinformaticas.es si deseas que lo 
+         * corrija o si tienes dudas.
+        */
+
+
+        /**
+         * * Solución 1.
+         * Números primos.
+        */
+
+        let num1 = parseInt(prompt("Introduce el primer número, por favor: "));
+        let num2 = parseInt(prompt("Introduce el segundo número, por favor: "));
+
+        let contadorPrimos = 0;
+        let n = num1; // Inicializamos n con el valor de num1
+
+        while (contadorPrimos < 3 && n <= num2) {
+            let esPrimo = true;
+
+            // Comprobar si n es primo.
+            for (let i = 2; i < n; i++) {
+                if (n % i === 0) {
+                    esPrimo = false;
+                    break; // Salir del bucle si no es primo
+                }
+            }
+
+            // Si n es primo, lo mostramos por pantalla.
+            if (esPrimo) {
+                if (contadorPrimos === 0) {
+                    document.write("Los 3 primeros números primos entre " + num1 + " y " + num2 + " son: ");
+                }
+                document.write(n + " ");
+                contadorPrimos++;
+            }
+
+            n++; // Pasar al siguiente número
+        }
+
+
+
+
+        /**
+         * * Solución 2.
+         * Números primos.
+        */
+
+        let numero1 = parseInt(prompt("Introduce el primer número, por favor: "));
+        let numero2 = parseInt(prompt("Introduce el segundo número, por favor: "));
+
+        let contador = 0;
+
+        for (let numeroEvaluar = numero1; numeroEvaluar < numero2; numeroEvaluar++) {
+            let primo = true
+
+            for (let i = 2; i < numeroEvaluar; i++) {
+                if (numeroEvaluar % i == 0) {
+                    primo = false;
+                    break;
+                }
+            }
+
+            if (primo) {
+                document.write(numeroEvaluar + "<br/>")
+                contador++;
+                if (contador == 3) break;
+            }
+        }
+
+
+    </script>
+
+</body>
+
+</html>

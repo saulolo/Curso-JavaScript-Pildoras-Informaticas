@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RETURN</title>
+</head>
+
+<body style="font-size: 2em;">
+
+    <script type="text/javascript">
+
+
+
+        /**
+         **                                    RETURN
+            * Función: es un bloque de código reutilizable que realiza una tarea específica cuando es llamado 
+            * o invocado. Las funciones se utilizan para dividir el código en partes más pequeñas y manejables, 
+            * lo que facilita la organización, la reutilización y la comprensión del código. Una función puede 
+            * recibir datos de entrada (parámetros) y puede devolver un resultado (valor de retorno) o realizar 
+            * una acción.
+            * Return: es una palabra clave utilizada en la mayoría de los lenguajes de programación para especificar 
+            * el valor que debe devolver una función cuando se llama. 
+            * !Nunca existirá un return sin su respectiva función.
+            * 
+        */
+
+
+        /**
+         * * Return
+         * Ejemplo 1. Invocando una función. 
+        */
+
+        document.write("Texto de ejemplo 1 <br>");
+
+        document.write("Texto de ejemplo 2 <br>");
+
+        //Palabra reservada para declarar funciones en JS.
+        function frases() {
+            return "Texto de ejemplo 5 <br>";
+        }//Return "te devuelvo".
+
+        let fraseResultado = frases() + " y final."; //puedo guardar la función dentro d euna variable y llamarla mas adelante.
+
+        document.write("Texto de ejemplo 3 <br>");
+
+        document.write("Texto de ejemplo 4 <br>");
+
+        document.write(frases());//Invoco la función y asi imprimo con el return.
+
+
+        frases(); //Asi llamo (invoco) la función creada.(cuando no tenia el returm)
+
+
+        document.write(fraseResultado);//Invoco la función y asi imprimo con el return.
+
+        function oracion(texto) {  //Puedo crear una función con parametros y el return me devuelve esa variable.
+
+            return texto;
+        }
+
+        let oracionResultado = oracion("Este es el ejemplo de texto 5 con paámetros. <br>") //Argumento
+
+        document.write(oracionResultado);
+
+
+
+        function calculo(num1, num2) { //Otra función.
+
+            if (isNaN(num1) || isNaN(num2)) {  //Función que me indica que si no es un número.
+
+                return "Imposible calcular, uno de los valores no es un número."
+            }
+
+            return resultado = num1 + num2;
+
+            document.write("se ha ejecutado la función. <br>");
+
+            return resultado;   //Lo que haya despues del return, no la toma, se sale despues del return
+
+            document.write("Esta linea no se jecuto <br>.");
+
+        }
+
+        document.write("Texto de ejemplo 6 <br>");
+
+
+        document.write("El resultado es: " + calculo("asd", 5));
+
+
+    </script>
+
+</body>
+
+</html>

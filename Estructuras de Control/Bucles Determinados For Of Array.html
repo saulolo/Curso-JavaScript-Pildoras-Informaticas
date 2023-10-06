@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FOR OF</title>
+</head>
+
+<body style="font-size: 2em;">
+
+    <script type="text/javascript">
+
+        /**
+         **                                    BUCLE FOR OF
+            * For Of: El bucle for...of es una estructura de control que se utiliza para recorrer elementos de  una 
+            * colección iterable, como arrays, objetos iterables o cadenas de texto, simplificando la iteración al 
+            * proporcionar acceso directo a los valores de la colección en lugar de índices. 
+            * Sintáxis: for(variable of iterable) {
+            *                 código a evaluar
+            *           }
+            * Nota: Este bucle es muy similar al bucle for each, cuyo objetico es simplicar la sintaxis del bucle tradicional.
+            * Nota: Los Array de JS soporta distintos tipos de variables.
+            * 
+        */
+
+
+        /**
+         * * For
+         * Ejemplo 1. Almacenar las edades y acceder a ellas con un bucle for tradicional.
+        */
+
+        let edades = [7, 9, 15, 25, 37]; //Asi establezco un array.
+
+        document.write(edades[2] + "<br>"); //Para acceder a un elemento, ubico su índice.
+
+        for (let i = 0; i < edades.length; i++) {  //Con .lenght establezco el limíte del array.
+
+            document.write(edades[i] + "<br>");
+
+        }
+
+
+
+        document.write("<br>");
+
+        /**
+         * * For Of
+         * Ejemplo 2. Almacenar las edades y acceder a ellas con un bucle for of.
+        */
+
+        let datos = [7, 9, 15, , , , , , , "Juan", true]; //Asi establezco un array.
+
+        for (let i of datos) { //lo que hace e sque a cada vuelta del bucle lo almacena en la variable i.
+
+            document.write(i + "<br>"); //Solo del i, por ser la variable donde se almaceno todos los elementos en su recorrido.
+        }
+
+
+
+        /**
+         * * For tradicional para Arrays Multidimensional
+         * Ejemplo 3. Recorrer arrays multidimensionales.
+        */
+
+        let arreglo = [[1, 7, 9], [5, 6, 8], [2, 5, 9]]; //Asi establezco un array dentro de otro.
+
+        document.write(arreglo[1] + "<br>"); // Asi acceso a un array interno.
+
+        document.write(arreglo[1][2] + "<br>"); // Asi acceso a un indice de un array interno.
+
+        document.write("------------------------<br>")
+
+        for (let i = 0; i < arreglo.length; i++) {  //Con este primer for accedo al array padre.
+            for (let j = 0; j < arreglo.length; j++) {  //
+                document.write(arreglo[i][j] + "<br>");
+            }
+        }
+
+
+        document.write("------------------------<br>")
+
+
+        /**
+         * * For of para Arrays Multidimensional
+         * Ejemplo 4. Recorrer arrays multidimensionales.
+        */
+        let arregloFor = [[2, 3, 10], [1, 0, 4], [4, 6, 3]];
+
+        for (dim1 of arregloFor) {  //con la variable dim1 recorre el primer array.
+            for (dim2 of dim1) {   //con la variable dim2 recorre el segundo array y entro a dim1.
+                document.write(dim2 + "<br>"); //dim2 es la que esta almacenado elemento a elemento.
+            }
+        }
+
+
+        document.write("------------------------<br>")
+
+
+        /**
+         * * For of para recorrer un String
+         * Ejemplo 5. Validar un email.
+         */
+
+        let email = "saulolo@gmail.com";
+
+        let arroba = 0;
+
+        for (letra of email) {
+
+            if (letra == "@") arroba++; //Si es una linea de codigo, se puede poner asi
+        }
+
+        if (arroba == 1) document.write("EL email esta correcto");
+        else document.write("EL email NO es correcto");
+
+
+
+    </script>
+
+</body>
+
+</html>

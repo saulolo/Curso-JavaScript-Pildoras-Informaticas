@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WHILE</title>
+</head>
+
+<body style="font-size: 2em;">
+
+    <script type="text/javascript">
+
+        /**
+         **                                    BUCLE WHILE
+            * While: es una estructura de control que permite ejecutar repetidamente un bloque de código mientras una 
+            * condición dada sea verdadera.
+            * Sintáxis: while(condición a evaluar) {
+            *                 código a evaluar
+            *           }
+            * Nota: Los bucles indeterminados (while y do/While) son aquellos bucles que sin ejecutar el programa, no 
+            * sabes cuantas veces se va a ejecutar el codigo de su interior; mientras que los determinados si sabemos
+            * cuantas veces si se va arepetir el código de su interior.
+            * !Bucle infinito: Es cuando una condicion es verdadera desde el principio y cuando entra nunca se vuleve false.
+            * !Bucles que no se ejecutan nunca: pon especial atención a la inicialización de las variables de control 
+            * !del bucle para asegurarte de que la condición es true, ya que si la condición es false desde el principio, 
+            * !el bucle jamás se ejecutará.
+            * 
+        */
+
+
+        /**
+         * * While
+         * Ejemplo 1. Ejecutar el código 10 veces.
+        */
+
+        let contador = 0;
+
+        while (contador < 10) {
+
+            document.write("Ejecución de código No: " + contador + "<br>");
+
+            contador++; //Si no agrego este contador, entro en un bucle infinito.
+
+        }
+
+
+        /**
+         * * While
+         * Ejemplo 2. Halle la raíz cuadrada de un número.
+        */
+
+        let numero = parseInt(prompt("Ingresa un número, por favor: "));
+
+        while (numero < 0) {
+
+            numero = prompt("Introduce un número POSITIVO, por favor.");
+            //No sale del bucle hasta que introduzca un número positivo
+
+        }
+
+        let raiz = Math.sqrt(numero);  //Método para obtener la raíz cuadrada de un número.
+        document.write("La raiz cuadrada de " + numero + " es: " + raiz + "<br>");
+
+
+    </script>
+
+</body>
+
+</html>

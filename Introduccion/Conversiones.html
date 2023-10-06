@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversiones</title>
+</head>
+
+<body style="font-size: 40px;">
+
+    <script>
+
+        /**
+         **                   CONVERSIONES
+         * Implicitas: Creadas por el propio lenguaje "on the go".
+         * Explicitas: Creadas por el programador. Las puedo hacer con las funciones parseInt() y parseFloat()
+         * 
+        */
+
+
+        let a = 7;
+        let b = "5";
+        let c = "x";
+        let d = parseInt("8.9"); //Trunca o sea no redondea sino que toma la parte entera
+        let e = parseFloat("2.9");
+
+        document.write(typeof (a));
+
+        document.write("<br>");
+
+        document.write(typeof (b));
+
+        document.write("<br>");
+
+        document.write(a + b); // Concatena danando como resultado = 75 "on the go."
+
+        document.write("<br>");
+
+        document.write(a * b); // La conversión implicita si fue la multiplicación.
+
+        document.write("<br>");
+
+        document.write(a - b); // La conversión implicita si fue la resta.
+
+        document.write("<br>");
+
+        document.write(a / b); // La conversión implicita si fue la multiplicación.
+
+        document.write("<br>");
+
+        document.write(a * c); // La conversión implicita no es posible e imprime NaN (Not a Number).
+
+        document.write("<br>");
+
+        document.write(a + c); // La conversión implicita concatena dando 7x.
+
+        document.write("<br>");
+
+        document.write(typeof (d));
+
+        document.write("<br>");
+
+        document.write(a + d); // La conversión explicita da 15.
+
+        document.write("<br>");
+
+        document.write(a + e); // La conversión explicita da 9.9.
+
+
+    </script>
+
+</body>
+
+</html>

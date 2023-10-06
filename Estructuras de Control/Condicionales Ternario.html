@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OPERADOR TERNARIO</title>
+</head>
+
+<body style="font-size: 2em;">
+
+    <script type="text/javascript">
+
+        /**
+         **                                    OPERADOR TERNARIO
+            * Ternario: es una alternativa al condicional if/else de una forma mucho más compacta y breve, que
+            * en muchos casos resulta más legible. Sin embargo, hay que tener cuidado, porque su sobreutilización 
+            * puede ser contraproducente y producir un código más difícil de leer.
+            * Sintáxis: condición ? valor verdadero : valor falso;
+            * !Nota: Hay que tener cuidado, porque su sobreutilización puede ser contraproducente y producir 
+            * !un código más difícil de leer. No esta bien visto utilizarlo en condicionales anidadas.
+            * 
+        */
+
+
+        /**
+         * * Operador Ternario
+         * Ejemplo 1. Elige una opción.
+        */
+
+        let nota = parseInt(prompt("He realizado mi exámen, el resultado es el siguiente: "));
+
+        let calificacion = nota < 5 ? "suspendido" : "aprobado"; //Asi se aplica el operador ternario.
+        //Es muy práctico, legible e ideal para ejemplos pequeños donde almacenamos la información en una 
+        //variable para luego utilizarla.
+
+        document.write("Mi nota es de: " + calificacion);
+
+
+    </script>
+
+</body>
+
+</html>

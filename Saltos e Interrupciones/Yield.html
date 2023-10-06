@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YIELD</title>
+</head>
+
+<body style="font-size: 2em;">
+
+    <script type="text/javascript">
+
+
+
+        /**
+         **                                    YIELD
+            * Función: En una función generadora de JavaScript, yield pausa temporalmente la función y devuelve
+            * un valor, permitiendo la continuación de la ejecución desde ese punto en la próxima llamada. Su
+            * utilidad es para optimizar los recursos de la maquina.
+            * Para declararla se pone un * en la función, asi: function*.
+            * Nota: Los generadores se utilizan en JS a partir de la ECMASCRIPT 6
+            * 
+        */
+
+
+        /**
+         * * Yield
+         * Ejemplo 1. Devuelva los números del 5 al 15. 
+        */
+
+        function* rango(desde, hasta) { // function*: asi de declara una funcion generadora, con *.
+
+            for (let i = desde; i < hasta; i++) {
+
+                yield i;  //Aqui funciona como el return con respecto a lso saltos de ejecución del programa.
+            }
+        }
+
+        let numero = rango(5, 15); //Como es una funcion generador, nos devolvera los valores uno a uno.
+
+        document.write(numero.next().value + "<br>"); //para mostrar los valores, lo hago con la función next.
+
+        document.write(numero.next().value + "<br>");
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operadores Lógicos</title>
+</head>
+
+<body>
+
+    <script>
+
+        /**
+         **                   OPERADORES LÓGICOS
+         * Y Lógico -> &&
+         * O Lógico -> ||
+         * Operador NO / Negación -> !
+         * Operadores de comparación -> == (Igualdad), ===(Igualdad estricta), !==(Desigualdad estricta), 
+         * > (Mayor que), < (Menor que), >= (Mayor o igual que), <= (Menor o igual que).
+         * Operador Agrupador -> ( )
+         * Operador Void -> No devulve nada (no tiene ningun return.)
+         * Operador Typeof-> Me averigua que tipo de valor me guarda una variable. 
+         * Operador Ternario -> condición ? expresión_si_verdadero : expresión_si_falso
+         * 
+        */
+
+        let num1 = 7;
+        let num2 = 5;
+        let num3 = 15;
+        let resultado = void (num1 + num2); //Asi le digo que no guarde nada
+
+        document.write("Resultado = " + (num1 - num2 * num3)) //Operador agrupador
+
+        document.write("<br>")
+
+
+        // Condicional if
+        if (num1 == num2) {  //Igualdad
+            document.write("Las variables iguales.")  //Si es verdad imprime esta línea
+        } else {
+            document.write("Las variables NO iguales.") //Si es falso imprime esta línea
+        }
+
+        document.write("<br>")
+
+
+
+        if (num1 > num2) { //Mayor que
+            document.write("Se cumple la condición.")
+        } else {
+            document.write("NO se cumple la condición.")
+        }
+
+        document.write("<br>")
+
+
+
+        if (num1 > num2 && num1 == num3) {  //Operador Y (se deben de cumplir las dos condiciones)
+            document.write("Se cumple la condición.")
+        } else {
+            document.write("NO se cumple la condición.")
+        }
+
+        document.write("<br>")
+
+
+
+        if (num1 > num2 || num1 == num3) {  //Operador O (se deben de cualquiera de las dos condiciones)
+            document.write("Se cumple la condición.")
+        } else {
+            document.write("NO se cumple la condición.")
+        }
+
+        document.write("<br>")
+
+        if (!(num1 > 5)) {  //Si num1 no es mayor que 5 (asi se utiliza el operador negación entre parentesis)
+            document.write("Se cumple la condición.")
+        }
+        else {
+            document.write("NO se cumple la condición.")
+        }
+
+        document.write("<br>")
+
+        document.write(resultado);  //Imprime Undefined
+
+        document.write("<br>")
+
+        document.write(typeof (num1)); // Me imprime number como el tipo de variable que es num1
+
+        document.write("<br>")
+
+
+        document.write("El programa ha finalizado.")
+
+        console.log("Linea 1 mensaje");
+
+
+
+    </script>
+
+</body>
+
+</html>

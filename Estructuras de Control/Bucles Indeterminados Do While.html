@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DO WHILE</title>
+</head>
+
+<body style="font-size: 2em;">
+
+    <script type="text/javascript">
+
+        /**
+         **                                    BUCLE DO WHILE
+            * Do While: es una estructura de control que permite ejecutar un bloque de código al menos una vez, y luego 
+            * repetirlo mientras una condición especificada sea verdadera.
+            * Sintáxis: do {
+            *                 código a evaluar
+            *           } while(condición a evaluar)
+            * Nota: Los bucles indeterminados (while y do/While) son aquellos bucles que sin ejecutar el programa, no 
+            * sabes cuantas veces se va a ejecutar el codigo de su interior; mientras que los determinados si sabemos
+            * cuantas veces si se va arepetir el código de su interior.
+            * !Bucle infinito: Es cuando una condicion es verdadera desde el principio y cuando entra nunca se vuleve false.
+            * 
+        */
+
+
+        /**
+         * * Do While
+         * Ejemplo 1. Halle la raíz cuadrada de un número.
+        */
+
+        let numero; //No inicializo esta variable para que la variable me valga UNDIFINED al inicio.
+
+        do {
+
+            numero = (prompt("Ingresa un número POSITIVO, por favor: "));
+
+        } while (numero < 0) //Hasta que numero == false, no saldra de ese bucle.
+
+        document.write("La raiz cuadrada de " + numero + " es: " + Math.sqrt(numero));
+
+
+
+    </script>
+
+</body>
+
+</html>

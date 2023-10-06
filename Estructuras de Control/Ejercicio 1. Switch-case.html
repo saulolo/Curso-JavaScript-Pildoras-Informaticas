@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EJERCICIO SWITCH CASE</title>
+</head>
+
+<body style="font-size: 2em;">
+
+    <script type="text/javascript">
+
+        /**
+         * * Ejercicio 1.
+         * Objetivo del ejercicio: Estás creando una simple aplicación meteorológica. Los datos del clima se
+         * obtienen en forma de códigos numéricos desde una ventana de tipo prompt, y debes convertir estos 
+         * códigos en descripciones legibles.
+         * Descripción de códigos de clima:
+         * 1: Día soleado
+         * 2: Parcialmente nublado
+         * 3: Mayormente nublado
+         * 4: Lluvioso
+         * 5: Nieve
+         * 6: Tormenta
+         * Nota: La estructura switch-case debe tomar el código de clima como condición e imprimir la 
+         * descripción correspondiente en la página web. Debes crear una opción válida en caso de que el usuario 
+         * no introduzca en el prompt ninguna de las opciones anteriores.
+        */
+
+
+
+        /**
+         * * Solución 1.
+         * Método Switch.
+        */
+
+        let clima = parseInt(prompt("Indica cual es el pronóstico del clima para el dia de hoy, [1.Día soleado"
+            + "| 2.Parcialmente nublado | 3.Mayormente nublado | 4.Lluvioso | 5.Nieve | 6.Tormenta]:  "));
+
+        switch (clima) {
+            case 1:
+                document.write("Día soleado.")
+                break;
+            case 2:
+                document.write("Parcialmente nublado.")
+                break;
+            case 3:
+                document.write("Mayormente nublado.")
+                break;
+            case 4:
+                document.write("Lluvioso.")
+                break;
+            case 5:
+                document.write("Nieve.")
+                break;
+            case 6:
+                document.write("Tormenta.")
+                break;
+            default:
+                document.write("Opción no válida.")
+                break;
+        }
+
+
+        document.write("<br>")
+
+
+        /**
+         * * Solución 2.
+         * Método con operado ternario.
+        */
+
+        let codigoClima = parseInt(prompt("Indica cual es el pronóstico del clima para el dia de hoy, [1.Día soleado"
+            + "| 2.Parcialmente nublado | 3.Mayormente nublado | 4.Lluvioso | 5.Nieve | 6.Tormenta]:  "));
+
+        let mensaje =
+            codigoClima === 1 ? "Día soleado." :
+                codigoClima === 2 ? "Parcialmente nublado." :
+                    codigoClima === 3 ? "Mayormente nublado." :
+                        codigoClima === 4 ? "Lluvioso." :
+                            codigoClima === 5 ? "Nieve." :
+                                codigoClima === 6 ? "Tormenta." :
+                                    "Opción no válida.";
+
+        document.write(mensaje);
+
+
+    </script>
+
+</body>
+
+</html>

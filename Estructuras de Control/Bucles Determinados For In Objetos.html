@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FOR IN</title>
+</head>
+
+<body style="font-size: 2em;">
+
+    <script type="text/javascript">
+
+
+
+
+        /**
+         **                                    BUCLE FOR IN
+            * For Of: El bucle for...se utiliza para recorrer y acceder a las propiedades enumerables de un objeto, 
+            * proporcionando el nombre de cada propiedad en cada iteración. 
+            * Sintáxis: for(variable in iterable) {
+            *                 código a evaluar
+            *           }
+            * Nota: El bucle for...in es especialmente útil cuando trabajas con objetos y deseas recorrer sus 
+            * propiedades de una manera sencilla.
+            * 
+        */
+
+
+        /**
+         * * For In
+         * Ejemplo 1. Construir un objeto de tipo coche.
+        */
+
+        let auto = { color: "Rojo", peso: 1200, potencia: 250 }; //Asi contruyo el objeto coche, se hace en forma de clave:valor.
+
+        for (let propiedad in auto) { //Declaro una variable (propiedad) in nombre del objeto (coche), asi de sencillo.
+
+            //document.write(propiedad + "<br>"); //Asi accedo a las claves del objeto.
+            //document.write(auto[propiedad] + "<br>"); //Asi accedo al valor del objeto.
+            document.write(propiedad + ":" + auto[propiedad] + "<br>") //Asi accedo a la clave mas el valor del objeto.
+        }
+
+
+
+        document.write("================<br>");
+
+
+        /**
+         * * For Of
+         * Ejemplo 2. Construir un objeto de tipo coche.
+         * Nota: Asi se recorre un objeto con el ciclo For Of, que es mucho mas complejo que con el For In, pero que 
+         * tambien se puede hacer.
+        */
+
+        let coche = { color: "Rojo", peso: 1200, potencia: 250, cilindrada: 2000 };
+
+        let claveValor = ""; //se almacenará las propiedades dle objeto.
+
+        for (let [k, v] of Object.entries(coche)) {
+
+            claveValor += k + ":" + v;
+
+            claveValor += " ";
+        }
+
+        document.write(claveValor);
+
+
+    </script>
+
+</body>
+
+</html>
